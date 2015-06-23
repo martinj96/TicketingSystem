@@ -1,0 +1,47 @@
+﻿@using SEDC.TicketingSystem.Security.Models
+@model LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Start Project</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/fontello.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+    <link rel="stylesheet" href="~/Content/main.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.backstretch.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <!--[if lt IE 9]>
+        <script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login">
+    <section class="loginForm">
+        <div class="overlay"></div>
+        <div class="box one">
+            <h1 class="test">Welcome to Ticket Hub</h1>
+            <i class="icon-down-open"></i>
+        </div>
+
+        <div class="box loginInput">
+            <i class="icon-ticket"></i>
+            <h2>Sign in to Ticket Hub</h2>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", name = "login" }))
+            {
+                @Html.AntiForgeryToken()
+                <input type="text" placeholder="Your email" name="UserName" required>
+                <input type="password" placeholder="Your password" name="Password" required>
+                <input type="submit" value="Log in" class="btn btn-default" />
+                <label class="control-label" for="RememberMe">Remember me?</label><input class="check-box" data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true">
+                <p>Don't you have ID? @Html.ActionLink("Register now", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) </p>
+            }
+        </div>
+    </section>
+</body>
+</html>

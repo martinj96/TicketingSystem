@@ -1,0 +1,47 @@
+﻿@using SEDC.TicketingSystem.Security.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300italic,300,400italic,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/fontello.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+    <link rel="stylesheet" href="~/Content/main.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.backstretch.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <!--[if lt IE 9]>
+            <script src="scripts/html5shiv.js"></script>
+        <![endif]-->
+
+</head>
+<body>
+    <header>
+        <div class="wrapper flowHidden">
+            <h1>Tickets Hub</h1>
+            <div class="navigation">
+                @Html.ActionLink("Tasks", "Index", "Home", new { area = "" }, new { @class = "active" })
+                @Html.ActionLink("How it works", "Index", "Home", new { area = "" }, new { @class = "" })
+                @if (Request.IsAuthenticated && (User as CustomPrincipal).IsInRole("admin"))
+                {
+                @Html.ActionLink("Admin Panel", "Index", "Admin", new { area = "" }, new { @class = "" })
+                }
+            </div>
+            <div class="user-box alignRight">
+                @Html.Partial("_LoginPartial")
+                
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+</body>
+</html>

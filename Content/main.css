@@ -1,0 +1,564 @@
+/*************************************/
+/*RESET CSS BEGIN*/
+/*************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*************************************/
+/*RESET CSS END*/
+/*************************************/
+/*************************************/
+/*HELPER CLASS BEGIN*/
+/*************************************/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.blur {
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Removes Default Firefox style*/
+    
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.flowHidden {
+    overflow: hidden;
+}
+
+.alignRight {
+    float: right;
+}
+
+.resetMargin {
+    margin: 0 !important;
+}
+/*************************************/
+/*HELPER CLASS END*/
+/*************************************/
+
+* {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.wrapper {
+    max-width: 920px;
+    margin: auto;
+    position: relative;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body.tickets {
+    font-family: 'Roboto', sans-serif;
+}
+/*TEXT CSS BEGIN*/
+
+.login h1 {
+    font-size: 30px;
+    line-height: 35px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 29%;
+    margin: auto;
+    padding: 30px 0;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.46);
+    font-weight: 700;
+}
+
+.login h2 {
+    font-size: 35px;
+    line-height: 40px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.46);
+}
+
+::-webkit-input-placeholder {
+    color: rgba(96, 96, 96, 0.56);
+    font-size: 15px;
+    line-height: 0px;
+    padding: 10px 0;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    
+    color: red;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    
+    color: red;
+}
+
+:-ms-input-placeholder {
+    color: red;
+}
+/*TEXT CSS END*/
+/*ICONS CSS BEGIN*/
+
+.icon-down-open {
+    font-size: 2.2em;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    line-height: 49px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out 0s;
+    -webkit-transition: background-color 0.25s ease-in-out 0s;
+    -moz-transition: background-color 0.25s ease-in-out 0s;
+    -o-transition: background-color 0.25s ease-in-out 0s;
+}
+
+.icon-down-open:hover {
+    background-color: white;
+    color: #464646;
+    border: 1px solid white;
+}
+
+.icon-down-open:hover .loginForm {
+    display: none;
+}
+
+.icon-ticket {
+    font-size: 6.2em;
+    color: white;
+    margin-bottom: 30px;
+}
+}
+/*ICONS CSS END*/
+/*Login Form CSS BEGIN*/
+
+section.loginForm {
+    height: 100vh;
+}
+section.loginForm .overlay {
+    background-color: rgba(0, 0, 0, 0.64);
+    opacity: 1;
+    height: 100vh;
+    transition: opacity 0.25s ease-in-out 0s;
+    -webkit-transition: opacity 0.25s ease-in-out 0s;
+    -moz-transition: opacity 0.25s ease-in-out 0s;
+    -o-transition: opacity 0.25s ease-in-out 0s;
+}
+section.loginForm:hover .overlay {
+    opacity: 1;
+}
+section.loginForm .box {
+    position: absolute;
+    top: 0;
+    bottom: 30%;
+    right: 0;
+    left: 0;
+    height: 0;
+    margin: auto;
+    text-align: center;
+}
+section.loginForm .box.loginIput {
+    height: 315px;
+}
+section.loginForm .loginInput input[type=text] {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+section.loginForm .loginInput input[type=password] {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+}
+section.loginForm .loginInput input[type=text],
+section.loginForm .loginInput input[type=password] {
+    border: 0;
+    */ display: block;
+    margin: auto;
+    width: 24%;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid white;
+    padding-left: 10px;
+    display: block;
+    margin-top: -1px;
+}
+form[name=login] p {
+    margin-top: 20px;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.46);
+}
+form[name=login] p:before {
+    content: "";
+    border-top: 1px solid white;
+    width: 24%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    margin: auto;
+}
+section.loginForm .loginInput {
+    display: none;
+    height: 350px;
+}
+/*Login Form CSS END*/
+/*TICKETS PAGE CSS BEGIN*/
+
+.tickets header {
+    border-bottom: 1px solid silver;
+}
+.tickets h1 {
+    font-size: 30px;
+    padding: 5px;
+    line-height: 35px;
+    margin-right: 2%;
+    font-weight: 300;
+}
+.navigation,
+.tickets h1 {
+    float: left;
+}
+.navigation {
+    width: 60%;
+    padding: 15px 0;
+}
+.navigation a.active {
+    background: rgb(226, 139, 94);
+    color: white;
+}
+.navigation a {
+    padding: 0 15px;
+    font-weight: 400;
+    color: black;
+}
+.navigation a:hover {
+    background: rgb(226, 139, 94);
+    color: white;
+}
+.user-box {
+    padding: 15px 0;
+}
+.logout_btn {
+    background: rgb(226, 139, 94);
+    padding: 5px 20px;
+    font-weight: 600;
+    color: white;
+}
+/*TICKETS PAGE CSS END*/
+/*TICKET LIST CSS BEGIN*/
+
+.tickets-list {
+    padding-top: 30px;
+}
+.tickets-list h2 {
+    font-size: 25px;
+    line-height: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.tickets-list h2:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgb(189, 189, 189);
+    position: absolute;
+    bottom: 0;
+}
+#ticket-type {
+    background: rgb(236, 236, 236);
+    padding: 10px;
+    font-size: 0;
+}
+.unfinished-icon {
+    width: 30px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    bottom: 10px;
+    margin: auto;
+    right: 0;
+    fill: rgb(129, 129, 129);
+}
+.unfinished-list {
+    margin-bottom: 50px;
+}
+.completed-list .ticket-item {
+    border: 1px solid rgb(43, 184, 43);
+    opacity: 0.6;
+}
+.completed-list .ticket-item:hover {
+    opacity: 1;
+}
+.ticket-item {
+    background: white;
+    padding: 10px;
+    display: inline-block;
+    width: 32.6%;
+    margin: 0 0 15px 1%;
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+}
+.ticket-item h3 {
+    font-size: 22px;
+    line-height: 30px;
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+.ticket-item .ticket-description {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.ticket-item .status {
+    position: absolute;
+    right: 8px;
+    display: block;
+    height: 4px;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.ticket-item .status.open {
+    background: green;
+}
+.ticket-item .status.progress {
+    background: #e5b61c;
+}
+.ticket-item .status.verify {
+    background: #e2435c;
+}
+.ticket-item .status.completed {
+    background: url('~/Images/check-done.svg') no-repeat 0 0;
+    background-size: 15px;
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+.ticket-item .tags {}
+.ticket-item .tags .tag {
+    font-size: 13px;
+    line-height: 13px;
+    display: inline-block;
+    padding: 3px 3px;
+    background: rgb(226, 226, 226);
+    margin: 0 1%;
+    font-weight: 300;
+    vertical-align: top;
+}
+/*TICKET LIST CSS END*/
+/*TICKET ITEM BEGIN*/
+.item-ticket{
+    display: none;
+}
+.item-ticket .wrapper {
+    padding: 10px;
+    border: 1px solid rgb(226, 139, 94);
+    margin-top: 40px;
+}
+.item-ticket .ticket-name {
+    font-size: 30px;
+    line-height: 35px;
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.item-ticket .ticket-time-details {
+    color: silver;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 40px;
+    font-style: italic;
+    background: url('~/Images/time-icon.svg') no-repeat left center;
+    background-size: 16px;
+    padding-left: 20px;
+}
+.item-ticket .ticket-msg p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.item-ticket .ticket-comments textarea {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid rgb(199, 199, 199);
+}
+/*TICKET ITEM END*/

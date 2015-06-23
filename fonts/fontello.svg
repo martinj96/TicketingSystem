@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="down-open" unicode="&#xe800;" d="m564 422l-234-224q-18-18-40-18t-40 18l-234 224q-16 16-16 41t16 41q38 38 78 0l196-188 196 188q40 38 78 0 16-16 16-41t-16-41z" horiz-adv-x="580" />
+<glyph glyph-name="ticket" unicode="&#xe801;" d="m571 598l177-177-319-319-177 177z m-117-547l345 345q10 11 10 25t-10 26l-202 202q-10 10-26 10t-25-10l-345-345q-10-11-10-25t10-26l202-202q11-10 26-10t25 10z m496 356l-506-507q-21-20-51-20t-50 20l-71 70q32 32 32 76t-32 76-76 32-75-32l-70 71q-21 20-21 50t21 51l506 505q21 21 50 21t51-21l70-70q-32-31-32-75t32-76 76-32 75 32l71-70q20-21 20-51t-20-50z" horiz-adv-x="1000" />
+<glyph glyph-name="right-open-big" unicode="&#xe802;" d="m13-20l358 370-358 372q-26 26 0 48 26 26 48 0l392-394q24-26 0-50l-392-394q-22-26-48 0-26 22 0 48z" horiz-adv-x="465" />
+</font>
+</defs>
+</svg>
